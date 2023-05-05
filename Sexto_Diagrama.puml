@@ -1,0 +1,28 @@
+@startuml
+
+left to right direction
+:Empleado: as E
+rectangle "**Empresa Pedidos**" {
+    (Introducir\nPedido) as IP
+    (Cancelar\nPedido) as CP
+    (Obtener Estado\nPedido) as OEP
+    (Borrar Pedido) as BoP
+    (Buscar Pedidos) as BuP
+    (Alta Cliente) as AC
+    (Buscar Cliente) as BC
+    (Nuevo\nProducto) as NP
+    (Borrar Producto) as BP
+}
+:Administrador: as A
+
+E -- IP
+E -- CP
+E -- OEP
+E -- BoP
+E -- BuP
+E -- AC
+E -- BC
+NP -- A
+BP -- A
+
+@enduml
