@@ -1,0 +1,13 @@
+@startuml
+
+left to right direction
+:Agente: as A
+(Enviar solicitud crédito) as ESC
+(Enviar solicitud de crédito personal) as ESCP
+(Enviar solicitud de crédito empresarial) as ESCE
+
+A --> ESC
+ESCP -up-|> ESC
+ESCE -up-|> ESC
+
+@enduml
