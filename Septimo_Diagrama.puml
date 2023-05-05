@@ -1,0 +1,26 @@
+@startuml
+
+left to right direction
+:Empleado: as E
+(Alta Cliente) as AC
+(Introducir\nPedido) as IP
+(Obtener\nEstado\nPedido) as OEP
+(Cancelar\nPedido) as CP
+(Buscar\nCliente) as BC
+(Pago en\ncuenta) as PC
+(Buscar Pedido) as BP
+(Pago con\ntarjeta) as PT
+
+E -- AC
+E -- IP
+E -- OEP
+E -- BP
+E -- CP
+AC ..> IP : extiende
+IP ..> BC : incluye
+IP <.. PT : extiende
+IP <.. PC : extiende
+OEP ..> BP : incluye
+CP ..> BP : incluye
+
+@enduml
