@@ -1,0 +1,18 @@
+@startuml
+
+:**Cliente Bancario**: as CB
+rectangle "Actor antecesor" as RA
+:**Cliente Corporativo**: as CC
+:**Cliente Normal**: as CN
+rectangle "Actor descendiente" as RD
+
+CB <|-- CC
+CB <|-- CN
+CB <- RA
+CN <-left- RD
+
+skinparam rectangleBackgroundColor lightgreen
+skinparam rectangleFontColor red
+skinparam rectangleBorderColor lightgreen
+
+@enduml
