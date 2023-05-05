@@ -1,0 +1,11 @@
+@startuml
+
+left to right direction
+:Bibliotecario: as B
+(Baja Socio) as BaS
+(Buscar Socio) as BoS
+
+B --> BaS
+BaS ..> BoS : <<include>>
+
+@enduml
